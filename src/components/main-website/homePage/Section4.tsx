@@ -8,7 +8,7 @@ const Section4 = () => {
     <MyRow gutter={[6, 24]} justify="space-between" style={{ paddingTop: 50 }}>
       <MyCol span={24}>
         <MyRow justify="center">
-          <p className="text-[1.6rem] text-center lg:text-[2.2rem] font-poppins lg:font-semibold mb-[5rem]">
+          <p className="text-3xl md:text-4xl font-bold text-gray-800 font-poppins text-center ">
             CareerBanao can assist you in 3 stages.
           </p>
         </MyRow>

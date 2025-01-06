@@ -35,7 +35,7 @@ const Course10th = () => {
             onClick={() => handleSelection(level.label)}
             className={`${
               selectedLevel === level.label ? "bg-[#F89A00] text-white" : "bg-white text-gray-800"
-            } border border-gray-300 py-2 px-[80px] rounded-lg hover:bg-[#F89A00] hover:text-white transition duration-300`}
+            } w-[150px] border border-gray-300 py-2 px-[80px] rounded-lg hover:bg-[#F89A00] hover:text-white transition duration-300`}
           >
             {level.label}
           </button>

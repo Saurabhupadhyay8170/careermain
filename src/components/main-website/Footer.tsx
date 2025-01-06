@@ -202,7 +202,7 @@ const Footer = () => {
               </Link>
               <Link
                 className="footer-social-link youtube"
-                to=" https://youtube.com/c/CareerBanao"
+                to="https://www.youtube.com/@CareerBanao"
                 target="_blank"
               >
                 <YoutubeOutlined className="footer-icons"  

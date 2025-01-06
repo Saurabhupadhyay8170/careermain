@@ -32,3 +32,48 @@
     font-size: 15px;
   }
 }
+/* Dropdown Menu Styling */
+.ant-dropdown-menu {
+  background: #ffffff !important; /* White background */
+  border-radius: 8px !important;
+  border: none !important;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2) !important;
+  padding: 8px 0;
+  position: relative;
+}
+
+/* Dropdown Items */
+.ant-dropdown-menu-item {
+  color: #333333 !important; /* Dark text for readability */
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 20px !important;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.ant-dropdown-menu-item:hover {
+  background-color: rgba(0, 0, 0, 0.1) !important; /* Light gray hover */
+  transform: scale(1.05);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Dropdown Item Links */
+.ant-dropdown-menu-item a {
+  color: #333333 !important;
+  text-decoration: none;
+}
+
+/* Dropdown Arrow Styling */
+.ant-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid #ffffff; /* Arrow color matches the dropdown background */
+}
