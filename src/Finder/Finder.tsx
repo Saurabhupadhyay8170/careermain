@@ -279,7 +279,13 @@ function Finder() {
       setFormSub("t");
     }
     if(Pick_Your_Level_Of_Education != "Completed10th"){
-      setEMI_("t");
+      if(Admission_Mode != "Regular Mode"){
+        setEMI_("t");
+      }
+      else{
+        setFormSub("t");
+      }
+      
     }
     
     setBudgetSelected("f");
