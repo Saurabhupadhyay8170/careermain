@@ -87,7 +87,7 @@ const Section1 = () => {
             <button
                 onClick={() => setShowForm(true)}
                 type="button"
-                className="bg-[#9940D4] px-4 p-2 hover:bg-[#E269B4] transition-all duration-300 ease-in-out transform hover:scale-105 btn-shadow rounded-3xl text-white text-[16px] font-semibold shadow-lg"
+                className="border-2 border-purple-700 px-8 text-gray-700 p-2 hover:bg-purple-700 transition-all duration-400 ease-in-out transform hover:scale-105  rounded-md hover:text-white text-[16px] font-semibold"
               >
                 Talk to College Expert
               </button>
