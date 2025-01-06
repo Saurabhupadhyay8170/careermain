@@ -48,7 +48,7 @@ const SliderYoutube: React.FC = () => {
     autoplaySpeed: 3000,
     pauseOnHover: true,
     dots: true,
-    
+    arrows:false,
     
     appendDots: (dots: React.ReactNode) => (
       <div className="mt-4">
