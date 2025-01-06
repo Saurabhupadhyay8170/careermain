@@ -59,14 +59,14 @@ const Section2 = () => {
           <div className="img-card flex justify-center items-center w-full h-[150px] lg:h-[180px] bg-[#ffffff] rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
             <img
               className="w-full h-full object-cover"
-              src="./logo/Bennett_University.webp"
+              src="./logo/bennett.jpeg"
               alt="Bennett University"
             />
           </div>
           <div className="img-card flex justify-center items-center w-full h-[150px] lg:h-[180px] bg-[#ffffff] rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
             <img
               className="w-full h-full object-cover"
-              src="./logo/products.png"
+              src="./logo/iilm.png"
               alt="Products"
             />
           </div>
@@ -77,7 +77,7 @@ const Section2 = () => {
           <div className="img-card flex justify-center items-center w-full h-[150px] lg:h-[200px] bg-[#ffffff] rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
             <img
               className="w-full h-full object-cover"
-              src="./logo/1631180032phpvUgTqj.jpeg"
+              src="./logo/images.png"
               alt="Institution"
             />
           </div>

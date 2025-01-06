@@ -161,7 +161,7 @@ const HeaderMain: React.FC = () => {
 
       {/* Mobile Menu (Side Drawer) */}
       <div
-        className={`fixed top-0 left-0 z-10 h-full w-3/4 max-w-[300px] bg-[#983fd4] text-white transform transition-transform duration-300 ${
+        className={`fixed top-0 left-0 z-20 h-full w-3/4 max-w-[300px] bg-[#983fd4] text-white transform transition-transform duration-300 ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >

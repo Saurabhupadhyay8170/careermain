@@ -48,6 +48,7 @@ const UnivercitiesLogoSlider: React.FC<UnivercitiesLogoSliderProps> = ({
     { logoUrl: "./logo/images.png" },
     { logoUrl: "./logo/sandip.png" },
     { logoUrl: "./logo/Slide80.jpeg" },
+    { logoUrl: "./logo/iilm.png" },
   ];
 
   const sliderSettings = {
@@ -56,7 +57,7 @@ const UnivercitiesLogoSlider: React.FC<UnivercitiesLogoSliderProps> = ({
     slidesToScroll: 1,
     autoplay: true,
     speed:500,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1000,
     pauseOnHover: true,
     dots: true,
     arrows:false,
