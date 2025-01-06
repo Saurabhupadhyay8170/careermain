@@ -112,7 +112,7 @@ export default function RegisterForm({ setShowLoginForm, setShowRegisterForm }: 
 
                   />
                   
-                  <MyInput placeholder="Mobile No"
+                  {/* <MyInput placeholder="Mobile No"
                     type="tel"
                     name="phone"
                     value={registerData.phone}
@@ -122,7 +122,29 @@ export default function RegisterForm({ setShowLoginForm, setShowRegisterForm }: 
                     minLength={10}
                     pattern="^[0-9]{10}$"
                     title="please enter valid number"
+                  /> */}
+                  <MyInput
+                    placeholder="Mobile No"
+                    type="tel"
+                    name="phone"
+                    value={registerData.phone}
+                    onChange={(e) => {
+                      // Allow only numeric input and ensure the input starts with +91
+                      let phone = e.target.value.replace(/[^0-9]/g, ""); // Remove non-numeric characters
+                      if (phone.length <= 10) {
+                        setRegisterData({
+                          ...registerData,
+                          phone: phone,
+                        });
+                      }
+                    }}
+                    required
+                    maxLength={10}
+                    pattern="^[0-9]{10}$"
+                    title="Please enter a valid number"
                   />
+                  
+                  
                   <div className="mb-4">
                    <select
                      id="stream"
@@ -231,10 +253,28 @@ export default function RegisterForm({ setShowLoginForm, setShowRegisterForm }: 
   )
 }
 
-function MyInput({ type = "text", placeholder, ...props }: React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>) {
+// function MyInput({ type = "text", placeholder, ...props }: React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>) {
+//   return (
+//     <div className="mb-4">
+//       <input {...props} className="shadow appearance-none border h-[2.5rem] rounded-[5px] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type={type} placeholder={placeholder} />
+//     </div>
+//   );
+// }
+function MyInput({ type = "text", placeholder, value, onChange, ...props }: React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>) {
   return (
-    <div className="mb-4">
-      <input {...props} className="shadow appearance-none border h-[2.5rem] rounded-[5px] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type={type} placeholder={placeholder} />
+    <div className="mb-4 relative">
+      <input
+        {...props}
+        value={value}
+        onChange={onChange}
+        className="shadow appearance-none border h-[2.5rem] rounded-[5px] w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline pl-[45px]" // Padding for the country code
+        id="phone"
+        type={type}
+        placeholder={placeholder}
+      />
+      {props.name === "phone" && (
+        <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">+91</span>
+      )}
     </div>
   );
 }

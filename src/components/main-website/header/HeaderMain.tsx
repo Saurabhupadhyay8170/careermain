@@ -19,9 +19,10 @@ import { CgProfile } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
 import { FiArrowRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setShowPopUp } from "src/redux/loginSignupSlice"
-
+import { useDispatch, useSelector } from "react-redux";
+import { setShowPopUp } from "src/redux/loginSignupSlice";
+import { Dropdown } from "antd"
+import { menuConfig } from "src/utils/constants";
 const HeaderMain: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -42,6 +43,54 @@ const HeaderMain: React.FC = () => {
        window.removeEventListener("scroll", handleScroll);
      };
    }, []);
+
+
+   let counsellingItems = [
+       {
+         key: "1",
+         label: (
+           <Link to={"/counselling/engineering"} onClick={() => setIsMenuOpen(false)}>
+             Engineering
+           </Link>
+         ),
+         title:menuConfig.counsEng
+       },
+       {
+         key: "2",
+         label: (
+           <Link to={"/counselling/management"} onClick={() => setIsMenuOpen(false)}>
+             Management
+           </Link>
+         ),
+         title:menuConfig.counsManag
+       },
+       {
+         key: "3",
+         label: (
+           <Link to={"/counselling/medical"} onClick={() => setIsMenuOpen(false)}>
+             Medical
+           </Link>
+         ),
+         title:menuConfig.counsMed
+       },
+     ]
+
+  // Fetch the list from Redux state
+  const couslist = useSelector((state: any) => state.navList.counsellingList);
+
+  // Filter items based on couslist
+  if (couslist) {
+    counsellingItems = counsellingItems.filter((item) =>
+      couslist.find((listItem: any) => item.title === listItem.module_name)
+    );
+  }
+  const menuItems = [
+    { name: "Home", path: "/" },
+    { name: "Admission", path: "/admissions/engineering" },
+    { name: "College Finder", path: "/CollegeFinder" },
+    { name: "Contact", path: "/contact" },
+    { name: "Career", path: "/career" },
+  ];
   return (
     <header>
       {/* Top Header */}
@@ -117,25 +166,49 @@ const HeaderMain: React.FC = () => {
             </div>
         </div>
 
-        {/* Desktop Navigation */}
         <nav className="hidden nav-header font-semibold md:flex gap-8 text-[18px]">
-          {[{ name: "Home", path: "/" },
-            { name: "Admission", path: "/admissions/engineering" },
-            { name: "Counselling", path: "/counselling/engineering" },
-            { name: "College Finder", path: "/CollegeFinder" },
-            { name: "Contact", path: "/contact" },
-            { name: "Career", path: "/career" }].map(
-            (item,index) => (
+      {menuItems.map((item, index) => {
+
+        if (item.name === "College Finder") {
+          return (
+            <React.Fragment key={index}>
               <Link
-              key={index}
-              to={item.path}
-              className="px-4 py-2 hover:bg-[#e4a6ca] text-white rounded transition"
-            >
-              <p>{item.name}</p>
-            </Link>
-            )
-          )}
-        </nav>
+                to={item.path}
+                className="px-4 py-2 hover:bg-[#983fd4] text-white rounded transition"
+              >
+                <p>{item.name}</p>
+              </Link>
+
+              {/* Counselling Dropdown */}
+              <Dropdown
+                overlayClassName="custom-dropdown"
+                menu={{ items: counsellingItems }}
+                trigger={["hover"]}
+                placement="bottomCenter"
+              >
+                <div className="px-4 py-2 hover:bg-[#983fd4] text-white rounded transition cursor-pointer">
+                  <p>Counselling</p>
+                </div>
+              </Dropdown>
+
+
+
+            </React.Fragment>
+          );
+        }
+
+        // Render other menu items
+        return (
+          <Link
+            key={index}
+            to={item.path}
+            className="px-4 py-2 hover:bg-[#983fd4] text-white rounded transition"
+          >
+            <p>{item.name}</p>
+          </Link>
+        );
+      })}
+    </nav>
         <div className="hidden md:block">          
           <button
             onClick={() => { dispatch(setShowPopUp()) }}                
@@ -177,29 +250,47 @@ const HeaderMain: React.FC = () => {
           </button>
         </div>
 
-        {/* Menu Items */}
-        <nav className="flex flex-col space-y-4 px-4 py-6">
-        {[{ name: "Home", path: "/" },
-            { name: "Admission", path: "/admissions/engineering" },
-            { name: "Counselling", path: "/counselling/engineering" },
-            { name: "College Finder", path: "/CollegeFinder" },
-            { name: "Contact", path: "/contact" },
-            { name: "Career", path: "/career" }].map(
-            (item,index) => (
-              <Link
-              key={index}
-              to={item.path}
-              onClick={(e) => {
-                e.stopPropagation();
-                setIsMenuOpen(false);
-              }}
-              className="flex items-center justify-between px-2 py-2 hover:bg-[#22247A] rounded"
-            >
-              <span className="text-lg">{item.name}</span>
-              <FiArrowRight />
-            </Link>
-          ))}
-        </nav>
+        {/* Mobile Menu Items */}
+          <nav className="flex flex-col space-y-4 px-4 py-6">
+            {[{ name: "Home", path: "/" },
+              { name: "Admission", path: "/admissions/engineering" },
+              { name: "College Finder", path: "/CollegeFinder" },
+              { name: "Counselling", path: "#", dropdown: true },  // This is for Counselling dropdown
+              { name: "Contact", path: "/contact" },
+              { name: "Career", path: "/career" }]
+              .map((item, index) => (
+                item.dropdown ? (
+                  // Counselling dropdown
+                  <Dropdown
+                    key={index}
+                    overlayClassName="custom-dropdown"
+                    menu={{ items: counsellingItems }}
+                    trigger={["click"]}
+                    placement="bottomCenter"
+                  >
+                    <div className="flex items-center justify-between px-2 py-2 hover:bg-[#22247A] rounded cursor-pointer">
+                      <span className="text-lg">{item.name}</span>
+                      <FiArrowRight />
+                    </div>
+                  </Dropdown>
+                ) : (
+                  // Regular menu items
+                  <Link
+                    key={index}
+                    to={item.path}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setIsMenuOpen(false);
+                    }}
+                    className="flex items-center justify-between px-2 py-2 hover:bg-[#22247A] rounded"
+                  >
+                    <span className="text-lg">{item.name}</span>
+                    <FiArrowRight />
+                  </Link>
+                )
+              ))}
+          </nav>
+
 
       </div>
 
