@@ -279,7 +279,13 @@ function Finder() {
       setFormSub("t");
     }
     if(Pick_Your_Level_Of_Education != "Completed10th"){
-      setEMI_("t");
+      if(Admission_Mode != "Regular Mode"){
+        setEMI_("t");
+      }
+      else{
+        setFormSub("t");
+      }
+      
     }
     
     setBudgetSelected("f");
@@ -487,7 +493,7 @@ function Form_sub(jsonD: string) {
     <div className={Brand_FormSub === "f" ? "hidden" : "block"}>
     <div className="flex items-center justify-center m-10 h-[300px] bg-[#EDEDE9]">
       <div className="w-full">
-       <h1 className="text-4xl font-bold text-gray-800 mb-6 pt-[100px] text-center">Become a Brand Ambassador of Your Campus!</h1>
+       <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6 pt-[100px] text-center">Become a Brand Ambassador of Your Campus!</h1>
        <FormSubmission onButtonClick={backto} Form_sub={Form_sub} data={prevState4} showHeader={false} showCourse={false} showState ={false}/>
       </div>
      </div>
@@ -495,7 +501,7 @@ function Form_sub(jsonD: string) {
 
     <div className={LevelEdu === "f" ? "hidden" : "block"}>
       <div className="compo bg-[#EDEDE9] font-poppins p-10 flex flex-col items-center justify-center">
-        <h1 className="text-4xl font-bold text-gray-800 mb-6">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
           Pick Your Level Of Education
         </h1>
         <div className="bt flex flex-wrap justify-center gap-6 mb-6 mt-5">
@@ -558,7 +564,7 @@ function Form_sub(jsonD: string) {
 {/* .................*********************................. */}
     <div className={QuestionAnswered === "f" ? "hidden" : "block"}>
     <div className="bg-[#EDEDE9] font-poppins p-10 flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
       What Was Your Score In 10th?
       </h1>
       <div className="flex flex-wrap justify-center gap-6 mb-6 mt-5">
@@ -608,7 +614,7 @@ function Form_sub(jsonD: string) {
 {/* ....12thScore.............*********************................. */}
     <div className={QuestionAnswered12 === "f" ? "hidden" : "block"}>
     <div className="bg-[#EDEDE9] font-poppins p-10 flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
       What Was Your Score In 12th?
       </h1>
       <div className="flex flex-wrap justify-center gap-6 mb-6 mt-5">
@@ -658,7 +664,7 @@ function Form_sub(jsonD: string) {
 {/* ....12thScore.............*********************................. */}
     <div className={QuestionAnswered13 === "f" ? "hidden" : "block"}>
     <div className="bg-[#EDEDE9] font-poppins p-10 flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
       What Was Your Score In Last Degree??
       </h1>
       <div className="flex flex-wrap justify-center gap-6 mb-6 mt-5">
@@ -709,7 +715,7 @@ function Form_sub(jsonD: string) {
 
     <div className={canProceed === "f" ? "hidden" : "block"}>
     <div className="bg-[#EDEDE9] font-poppins p-10 flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
         Are you looking for Admission
       </h1>
       <div className="flex flex-wrap justify-center gap-4 mb-6 mt-5">
@@ -753,7 +759,7 @@ function Form_sub(jsonD: string) {
 
     <div className={Course10th === "f" ? "hidden" : "block"}>
     <div className="bg-[#EDEDE9] font-poppins p-10 flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">Select Course</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">Select Course</h1>
       <div className="flex flex-wrap justify-center gap-4 mb-6 mt-5">
         <button
           className="bg-white text-gray-800
@@ -797,7 +803,7 @@ function Form_sub(jsonD: string) {
 
     <div className={AdmissionTaken === "f" ? "hidden" : "block"}>
     <div className="bg-[#EDEDE9] font-poppins p-10 flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
         Have you taken Admission?
       </h1>
       <div className="flex flex-wrap justify-center gap-4 mb-6 mt-5">
@@ -843,7 +849,7 @@ function Form_sub(jsonD: string) {
     <div className={BudgetSelected === "f" ? "hidden" : "block"}>
 
     <div className="bg-[#EDEDE9] font-poppins p-10 flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
         How Much Are You Planning To Spend?
       </h1>
       <div className="flex flex-wrap justify-center gap-6 mb-6 mt-5">

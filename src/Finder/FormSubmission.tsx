@@ -40,8 +40,35 @@ const FormSubmission: React.FC<FormSubmissionProps> = ({
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+  
+    // Validate the field dynamically and update the errors state
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: validateField(name, value),
+    }));
   };
+  
+  // Helper function to validate individual fields
+  const validateField = (name: string, value: string) => {
+    switch (name) {
+      case "fullName":
+        return value.trim() === "";
+      case "dob":
+        return value.trim() === "";
+      case "email":
+        return !/^\S+@\S+\.\S+$/.test(value);
+      case "mobileNumber":
+        return !/^\d{10}$/.test(value);
+      case "program":
+        return value.trim() === "";
+      case "state":
+        return value.trim() === "";
+      default:
+        return false;
+    }
+  };
+  
 
   const validateForm = () => {
     const newErrors = {
@@ -68,7 +95,7 @@ const FormSubmission: React.FC<FormSubmissionProps> = ({
 
   return (
     <div className="bg-[#EDEDE9] font-poppins p-10 flex flex-col items-center justify-center">
-      {showHeader && <h1 className="text-4xl font-bold text-gray-800 mb-6">Just One Step Away From Your Exclusive College List!</h1>}
+      {showHeader && <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">Just One Step Away From Your Exclusive College List!</h1>}
       <form className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-6xl mt-5">
         <div>
           <label className="block text-gray-700 font-bold mb-1">Full Name</label>

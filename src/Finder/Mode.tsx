@@ -26,7 +26,7 @@ const Mode: React.FC<ModeProps> = ({
 
   return (
     <div className="bg-[#EDEDE9] font-poppins p-10 flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
         Mode of degree
       </h1>
       <div className="flex flex-wrap justify-center gap-4 mb-6 mt-5">
