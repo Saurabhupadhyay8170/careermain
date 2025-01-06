@@ -49,6 +49,7 @@ const SliderYoutube: React.FC = () => {
     pauseOnHover: true,
     dots: true,
     
+    
     appendDots: (dots: React.ReactNode) => (
       <div className="mt-4">
         <ul className="flex justify-center">{dots}</ul>
