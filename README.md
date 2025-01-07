@@ -22,7 +22,7 @@ cd Website-devxsphere
 ### 4️⃣ **Set the Upstream URL**
 Before making any changes, set the upstream URL:
 ```bash
-git remote add upstream https://github.com/DevXsphere/Website-devxsphere.git
+git remote add upstream https://github.com/Saurabhupadhyay8170/careermain.git
 
 # As a best practice, pull the latest changes before creating a new branch:
 git pull upstream main --rebase
