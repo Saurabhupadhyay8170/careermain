@@ -33,7 +33,7 @@ const Updates = () => {
   ];
 
   return (
-    <div className="px-8 bg-[#EDEDE9]">
+    <div className="px-4 sm:px-8 bg-[#EDEDE9]">
       <div className="shadow-md p-6">
         <h3 className="text-2xl font-bold text-gray-800 mb-4">
           Sanskriti University Latest Updates
@@ -44,26 +44,13 @@ const Updates = () => {
             scrollbarWidth: "thin"
           }}
         >
-          <style>
-            {`
-              ::-webkit-scrollbar {
-                height: 15px;
-              }
-              ::-webkit-scrollbar-thumb {
-                background: #1d4ed8; 
-                border-radius: 4px;
-              }
-              ::-webkit-scrollbar-track {
-                background: #e5e7eb; 
-              }
-            `}
-          </style>
+          
           {latestUpdates.map((update) => (
             <div
               key={update.id}
-              className="min-w-[300px] max-w-[300px] bg-blue-100 p-4 rounded-lg shadow-md"
+              className="min-w-[280px] sm:min-w-[300px] max-w-[300px]  bg-pink-100 p-4 mb-2 rounded-lg shadow-md"
             >
-              <h4 className="text-xl font-semibold text-blue-600">{update.title}</h4>
+              <h4 className="text-xl font-semibold text-purple-700">{update.title}</h4>
               <p className="text-gray-700 mt-2">{update.description}</p>
             </div>
           ))}

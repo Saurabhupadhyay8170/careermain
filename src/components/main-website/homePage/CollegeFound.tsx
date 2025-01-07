@@ -32,7 +32,7 @@ const CollegeFinder: React.FC = () => {
             Discover detailed information about colleges, including their
             programs, campus life, rankings, and much more.
           </p>
-          <Link to={'/admissions/engineering/'}>
+          <Link to={'/admissions'}>
            <button className="bg-[#983fd4] hover:bg-[#e46ab3] text-white py-2 px-6 rounded-lg w-full">
              Explore Now
            </button>

@@ -24,7 +24,7 @@ const AdmissionProcess: React.FC = () => {
 
 
   return (
-    <div className="px-8 bg-[#EDEDE9] mt-4">
+    <div className="px-4 sm:px-8 bg-[#EDEDE9] mt-4">
       <div className="w-full shadow-md mt-8 p-4">
         {aboutData.map((aboutItem, index) => (
           <div key={index}>

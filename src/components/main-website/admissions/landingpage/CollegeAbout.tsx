@@ -21,9 +21,9 @@ const CollegeAbout: React.FC = () => {
   };
 
   return (
-    <div className="px-8 bg-[#EDEDE9]">
+    <div className="px-4 sm:px-8 bg-[#EDEDE9]">
       {/* About Section */}
-      <div className="shadow-md p-6 mb-8">
+      <div className="shadow-md p-4 mb-8">
         {aboutData.map((aboutItem, index) => (
           <div key={index}>
             <h2 className="text-3xl font-bold text-gray-800 mb-4">{aboutItem.title}</h2>

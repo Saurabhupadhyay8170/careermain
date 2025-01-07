@@ -25,7 +25,7 @@ function Header() {
      setShowHomePopup(true)
     }
   },[])
-  return (
+  return ( 
     <div>
       <ToastContainer pauseOnHover={false}/>
       {showHomePopup && <HomePopUp/>}

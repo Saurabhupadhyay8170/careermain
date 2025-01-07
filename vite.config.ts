@@ -4,9 +4,9 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  server: {
-    port: 3000,
-  },
+  // server: {
+  //   port: 3000,
+  // },
   resolve: {
     alias: {
       src: path.resolve(__dirname, "./src"),
@@ -21,4 +21,9 @@ export default defineConfig({
     },
   },
   plugins: [react()],
+  server: {
+    hmr: {
+      overlay: false,  // Disable the HMR overlay
+    },
+  },
 });

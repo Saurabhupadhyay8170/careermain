@@ -39,7 +39,7 @@ const CourseFees: React.FC = () => {
   const visibleCourses = showAll ? courses : courses.slice(0, 5);
 
   return (
-    <div className="px-8 bg-[#EDEDE9] mt-4">
+    <div className="px-4 sm:px-8 bg-[#EDEDE9] mt-4">
     <div className="w-full mt-8 p-4 shadow-md">
      {aboutData.map((aboutItem, index) => (
           <div key={index}>
@@ -50,9 +50,10 @@ const CourseFees: React.FC = () => {
                 __html: `${aboutItem.description}`,
               }}
             />
-            <h1 className="text-3xl font-bold mb-6 pt-4">{aboutItem.feeStructureTitle}</h1>
+            <h1 className="text-2xl font-semibold text-gray-800 mb-6 pt-4">{aboutItem.feeStructureTitle}</h1>
           </div>
         ))}
+      <div className="overflow-x-auto">
       <table className="w-full border border-gray-300">
         <thead>
           <tr className="bg-gray-100">
@@ -76,6 +77,7 @@ const CourseFees: React.FC = () => {
           ))}
         </tbody>
       </table>
+      </div>
 
       {/* View More/View Less Button */}
       <div className="mt-4">
