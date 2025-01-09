@@ -13,31 +13,31 @@ import Scholarship from "src/components/main-website/admissions/landingpage/Scho
 import UniFaq from "src/components/main-website/admissions/landingpage/UniFaq"
 import Updates from "src/components/main-website/admissions/landingpage/Updates"
 import PrivacyForm from "src/components/main-website/privacypolicy/PrivacyForm"
-
 const LandingPages = () => {
   return (
     <>
-     <div className="font-poppins">
-     <CollegeLandingPage/>
-     <CollegeAbout/>
-     <Updates/>
-     <CourseFees/>
-     <AdmissionProcess/>
-     <AdmCard/>
-     <Scholarship/>
-     <Placements/>
-     <AdmCard2/>
-     <CutOff/>
-     <CampusFacilities/>
-     <ReviewComponent/>
-     <UniFaq/>
-     <div className="px-4 sm:px-8">
-     <PrivacyForm/>
-     </div>
-     <ExamCard/>
-     </div>
+      <div className="font-poppins">
+        <CollegeLandingPage />
+        <CollegeAbout />
+        <Updates />
+        <CourseFees />
+        <AdmissionProcess />
+        <AdmCard />
+        <Scholarship />
+        <Placements />
+        <AdmCard2 />
+        <CutOff />
+        <CampusFacilities />
+        <ReviewComponent />
+        <UniFaq />
+        <div className="px-4 sm:px-8">
+          <PrivacyForm />
+        </div>
+        <ExamCard category="Engineering" isLoading={false} /> {/* Pass the required props here */}
+      </div>
     </>
-  )
-}
+  );
+};
+
 
 export default LandingPages
