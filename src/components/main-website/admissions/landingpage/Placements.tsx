@@ -47,7 +47,7 @@ const Placements: React.FC = () => {
     <div className="px-4 sm:px-8 mt-4 bg-[#EDEDE9]">
       {/* About Section */}
       <div className="shadow-md p-4 mb-8">
-        <h1 className="text-4xl font-bold text-gray-800 mb-8">Sanskriti University Placements</h1>
+        <h1 className="text-3xl font-bold text-gray-800 mb-8">Sanskriti University Placements</h1>
 
         {/* Sanskriti University Placement 2023 Section */}
         <div className="mb-8">

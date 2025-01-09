@@ -66,7 +66,7 @@ const CollegeLandingPage: React.FC = () => {
                 </span>
                 <span className="ml-2">({universityData.reviews} Reviews)</span>
                 {universityData.isPopular && (
-                  <span className="ml-4 px-2 py-1 text-sm bg-blue-100 text-blue-600 rounded">
+                  <span className="ml-4 px-2 py-1 text-sm bg-purple-200 text-purple-600 rounded">
                     Popular
                   </span>
                 )}
@@ -74,22 +74,22 @@ const CollegeLandingPage: React.FC = () => {
               <p className="text-gray-700 mb-6">{universityData.description}</p>
               <div className="flex items-center space-x-6 mb-6">
                 <span className="text-gray-600 flex">
-                  <FaMapMarkerAlt className="mr-2 text-blue-600" />
+                  <FaMapMarkerAlt className="mr-2 text-purple-600" />
                   {universityData.location}
                 </span>
                 {/* Gallery link */}
                 <button
                   onClick={openGallery}
-                  className="text-blue-600 underline focus:outline-none"
+                  className="text-purple-600 underline focus:outline-none"
                 >
                   Gallery
                 </button>
               </div>
               <div className="flex flex-wrap gap-4">
-                <button className="px-6 py-2 border border-blue-600 text-blue-600 rounded hover:bg-blue-100 w-full sm:w-auto">
+                <button className="px-6 py-2 border border-purple-600 text-purple-600 rounded hover:bg-purple-600 hover:text-white w-full sm:w-auto">
                   Download Brochure
                 </button>
-                <button className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 w-full sm:w-auto">
+                <button className="px-6 py-2 bg-purple-600 text-white rounded hover:bg-pink-500 w-full sm:w-auto">
                   Apply Now
                 </button>
               </div>
@@ -105,19 +105,19 @@ const CollegeLandingPage: React.FC = () => {
               />
               <div className="absolute top-4 left-1 sm:left-4 bg-white text-center p-2 rounded shadow">
                 <p className="text-sm text-gray-600">Highest Package</p>
-                <p className="text-sm sm:text-lg font-bold text-blue-600">
+                <p className="text-sm sm:text-lg font-bold text-purple-600">
                   {universityData.highestPackage}
                 </p>
               </div>
               <div className="absolute top-4 right-1 sm:right-4 bg-white text-center p-2 rounded shadow">
                 <p className="text-sm text-gray-600">Year of Establishment</p>
-                <p className="text-sm sm:text-lg font-bold text-blue-600">
+                <p className="text-sm sm:text-lg font-bold text-purple-600">
                   {universityData.establishmentYear}
                 </p>
               </div>
               <div className="absolute bottom-4 right-1 sm:right-4 bg-white text-center p-2 rounded shadow">
                 <p className="text-sm text-gray-600">Type</p>
-                <p className="text-sm sm:text-lg font-bold text-blue-600">
+                <p className="text-sm sm:text-lg font-bold text-purple-600">
                   {universityData.type}
                 </p>
               </div>
