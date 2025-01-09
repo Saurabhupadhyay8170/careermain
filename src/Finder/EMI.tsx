@@ -51,6 +51,8 @@ const EMI: React.FC<EMIProps> = ({
           <button
             className="cursor-not-allowed 
             bg-gray-400  text-white border font-bold border-gray-300 py-2 px-[50px] rounded-lg hover:bg-[#F89A00] hover:text-white transition duration-300"
+        
+            onClick={()=> alert("Please Select a option!")}
         >
             Next
           </button>
