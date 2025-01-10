@@ -86,7 +86,7 @@ const HeaderMain: React.FC = () => {
   }
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "Admission", path: "/admissions/engineering" },
+    { name: "Admission", path: "/admissions" },
     { name: "College Finder", path: "/CollegeFinder" },
     { name: "Contact", path: "/contact" },
     { name: "Career", path: "/career" },
