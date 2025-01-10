@@ -93,7 +93,7 @@ const Scholarship: React.FC = () => {
   };
 
   return (
-    <div className="px-8">
+    <div className="px-4 sm:px-8">
       <div className="w-full shadow-md mt-8 p-4">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">
           {content.title}
@@ -103,7 +103,7 @@ const Scholarship: React.FC = () => {
         </p>
 
         {scholarships.slice(0, showAll ? scholarships.length : 1).map((scholarship, index) => (
-          <div key={index} className="border p-6">
+          <div key={index} className="border p-2 sm:p-6">
             <h2 className="text-xl font-semibold mb-2">{scholarship.name}</h2>
             <p className="text-gray-700 mb-4">{scholarship.eligibility}</p>
             <table className="w-full table-auto border-gray-300">

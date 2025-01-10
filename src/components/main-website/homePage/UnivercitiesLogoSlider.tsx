@@ -48,6 +48,7 @@ const UnivercitiesLogoSlider: React.FC<UnivercitiesLogoSliderProps> = ({
     { logoUrl: "./logo/images.png" },
     { logoUrl: "./logo/sandip.png" },
     { logoUrl: "./logo/Slide80.jpeg" },
+    { logoUrl: "./logo/iilm.png" },
   ];
 
   const sliderSettings = {
@@ -56,11 +57,15 @@ const UnivercitiesLogoSlider: React.FC<UnivercitiesLogoSliderProps> = ({
     slidesToScroll: 1,
     autoplay: true,
     speed:500,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1000,
     pauseOnHover: true,
     dots: true,
+<<<<<<< HEAD
     arrows: false,
     
+=======
+    arrows:false,
+>>>>>>> 83c967b9ef419100714744d75fa8cf0e7f588d30
     appendDots: (dots: React.ReactNode) => (
       <div className="mt-4">
         <ul className="flex justify-center">{dots}</ul>

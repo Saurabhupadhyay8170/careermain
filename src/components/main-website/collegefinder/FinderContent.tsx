@@ -49,7 +49,7 @@ const FinderContent: React.FC = () => {
               Budget-Friendly College Options
             </h3>
             <p className="text-gray-600 mb-4">
-              Choose colleges that fit within your budget. Explore scholarships, financial aid, and cost-effective options.
+            Choose colleges that fit within your budget, qualification, and location. Explore scholarships, financial aid, and cost-effective options to make an informed decision.
             </p>
             <a
               href="#"

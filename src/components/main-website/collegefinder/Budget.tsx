@@ -35,14 +35,14 @@ const Budget = ({ budgetRanges, nextPath = "/emi", prevPath = '/mode' }: BudgetP
       <h1 className="text-4xl font-bold text-gray-800 mb-6">
         How Much Are You Planning To Spend?
       </h1>
-      <div className="flex flex-wrap justify-center gap-4 mb-6 mt-5">
+      <div className="grid grid-cols-2 justify-center gap-4 mb-6 mt-5">
         {ranges.map((Budget, index) => (
           <button
             key={index}
             onClick={() => handleSelection(Budget)}
             className={`${
               selectedBudget === Budget ? "bg-[#F89A00] text-white" : "bg-white text-gray-800"
-            } border border-gray-300 py-2 px-[80px] rounded-lg hover:bg-[#F89A00] hover:text-white transition duration-300`}
+            } border w-[150px] border-gray-300 py-2 px-[80px] rounded-lg hover:bg-[#F89A00] hover:text-white transition duration-300`}
           >
             {Budget}
           </button>

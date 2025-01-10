@@ -32,7 +32,7 @@ const CollegeFinder: React.FC = () => {
             Discover detailed information about colleges, including their
             programs, campus life, rankings, and much more.
           </p>
-          <Link to={'/admissions/engineering/'}>
+          <Link to={'/admissions'}>
            <button className="bg-[#983fd4] hover:bg-[#e46ab3] text-white py-2 px-6 rounded-lg w-full">
              Explore Now
            </button>
@@ -42,7 +42,7 @@ const CollegeFinder: React.FC = () => {
         {/* Center Button */}
         <div className="flex-shrink-0">
           <Link to={'/CollegeFinder'}>
-           <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-12 rounded-full shadow-lg transition-transform transform hover:scale-110">
+           <button className="border-2 border-white px-8 text-white p-2 hover:bg-purple-700 transition-all duration-400 ease-in-out transform hover:scale-105  rounded-md hover:text-white text-[16px] font-semibold">
             Start College Finder
            </button>
           </Link>
