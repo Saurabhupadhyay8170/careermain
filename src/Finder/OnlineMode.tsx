@@ -31,7 +31,7 @@ const OnlineMode: React.FC<OnlineModeProps> = ({
 
   return (
     <div className="bg-[#EDEDE9] font-poppins p-10 flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
         Select Course
       </h1>
       <div className="flex flex-wrap justify-center gap-4 mb-6 mt-5">
@@ -54,7 +54,12 @@ const OnlineMode: React.FC<OnlineModeProps> = ({
           </button>
           <button
             className="cursor-not-allowed 
+
             bg-gray-400  text-white border font-bold border-gray-300 py-2 px-[50px] rounded-lg hover:bg-pink-500 hover:text-white transition duration-300"
+
+           
+            onClick={()=> alert("Please Select a option!")}
+
         >
             Next
           </button>
