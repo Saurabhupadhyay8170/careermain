@@ -39,9 +39,14 @@ const FormSubmission: React.FC<FormSubmissionProps> = ({
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+    let { name, value } = e.target;
+    if (name === "mobileNumber") {
+      value = value.replace(/\D/g, ''); 
+      
+  }
   
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+    
     // Validate the field dynamically and update the errors state
     setErrors((prevErrors) => ({
       ...prevErrors,
