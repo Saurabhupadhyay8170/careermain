@@ -60,7 +60,10 @@ const UnivercitiesLogoSlider: React.FC<UnivercitiesLogoSliderProps> = ({
     autoplaySpeed: 1000,
     pauseOnHover: true,
     dots: true,
+    arrows: false,
+   
     
+
     appendDots: (dots: React.ReactNode) => (
       <div className="mt-4">
         <ul className="flex justify-center">{dots}</ul>

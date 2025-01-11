@@ -14,10 +14,10 @@ import Scholarship from "src/components/main-website/admissions/landingpage/Scho
 import UniFaq from "src/components/main-website/admissions/landingpage/UniFaq"
 import Updates from "src/components/main-website/admissions/landingpage/Updates"
 import PrivacyForm from "src/components/main-website/privacypolicy/PrivacyForm"
-
 const LandingPages = () => {
   return (
     <>
+
      <div className="font-poppins">
      <CollegeLandingPage/>
      <CollegeAbout/>
@@ -37,8 +37,10 @@ const LandingPages = () => {
      <PrivacyForm/>
      </div>
      </div>
+      
     </>
-  )
-}
+  );
+};
+
 
 export default LandingPages
