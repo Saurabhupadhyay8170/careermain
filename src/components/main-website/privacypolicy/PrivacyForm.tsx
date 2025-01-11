@@ -24,6 +24,73 @@ const menuOptions = [
         value: "Management",
         label: "Management",
     },
+    {
+        value:"Commerce and Banking",
+        label:"Commerce and Banking",
+    },
+    {
+        value:"Science",
+        label:"Science",
+    },
+    {
+        value:"Hotel Management",
+        label:"Hotel Management",
+    },
+    {
+        value:"Information Technology",
+        label:"Information Technology",
+    },
+    {
+        value:"Arts & Humanities",
+        label:"Arts & Humanities",
+    },
+
+    {
+        value:"Law",
+        label:"Law",
+    },
+    {
+        value:"Agriculture",
+        label:"Agriculture",
+    },
+    {
+        value:"Pharmacy",
+        label:"Pharmacy",
+    },
+    {
+        value:"Vocational",
+        label:"Vocational",
+    },
+    {
+        value:"Retail",
+        label:"Retail",
+    },
+    {
+        value:"Design",
+        label:"Design",
+    },
+    {
+        value:"Physical",
+        label:"Physical",
+    },
+    {
+        value:"Paramedical",
+        label:"Paramedical",
+    },
+    {
+        value:"Nursing",
+        label:"Nursing",
+    },
+    {
+        value:"Performing Arts",
+        label:"Performing Arts",
+    },
+    {
+        value:"Others",
+        label:"Others",
+    },
+
+
 ]
 
 
