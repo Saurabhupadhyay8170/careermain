@@ -44,6 +44,7 @@ const Meeting: React.FC = () => {
           slidesToScroll={1}
           autoplay={true}
           autoplaySpeed={4000}
+          arrows={false}
         >
            {sliderData.map((text, index) => (
           <div key={index} className="p-5 bg-purple-700  rounded-md">
