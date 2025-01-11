@@ -38,7 +38,7 @@ const MyModal = ({
       okText={okText}
       cancelText={cancelText}
       title={title}
-      width={600}
+      width={750}
       className="custom-modal"
     >
       {children}

@@ -53,7 +53,7 @@ const FinderContent: React.FC = () => {
             </p>
             <a
               href="#"
-              className="text-blue-500 hover:text-blue-700 font-medium"
+              className="text-blue-500 hover:text-purple-700 font-medium"
             >
               <Link to={'/CollegeFinder'}>Learn More</Link>
             </a>

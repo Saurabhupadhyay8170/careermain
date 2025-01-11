@@ -42,7 +42,7 @@ const CollegeFinder: React.FC = () => {
         {/* Center Button */}
         <div className="flex-shrink-0">
           <Link to={'/CollegeFinder'}>
-           <button className="border-2 border-white px-8 text-white p-2 hover:bg-purple-700 transition-all duration-400 ease-in-out transform hover:scale-105  rounded-md hover:text-white text-[16px] font-semibold">
+           <button className="border-2 border-white px-8 text-white p-2 hover:bg-purple-700   rounded-md hover:text-white text-[16px] font-semibold">
             Start College Finder
            </button>
           </Link>

@@ -151,7 +151,7 @@ const HeaderMain: React.FC = () => {
       </div>
 
       {/* Main Header */}
-      <div className={`main-header bg-gradient-to-r from-[#983fd4] to-[#e46ab3] px-4 flex justify-between items-center shadow transition-transform duration-300 ${isScrolled ? "fixed top-0 w-full z-50" : ""}`}>
+      <div className={`main-header bg-gradient-to-r from-[#983fd4] to-[#e46ab3] px-4 flex justify-between items-center shadow transition-transform duration-300 ${isScrolled ? "fixed top-0 w-full z-20" : ""}`}>
         {/* Logo */}
         <div className="header-section flex justify-between items-center text-white px-4 py-3 rounded-t-lg">
             <div className="flex items-center gap-2  text-[32px] font-semibold">
@@ -225,7 +225,7 @@ const HeaderMain: React.FC = () => {
           <button
             onClick={() => setIsMenuOpen(true)}
             aria-label="Open Mobile Menu"
-            className="text-[#983fd4] text-2xl"
+            className="text-white text-4xl"
           >
             <HiMenu />
           </button>
@@ -234,17 +234,17 @@ const HeaderMain: React.FC = () => {
 
       {/* Mobile Menu (Side Drawer) */}
       <div
-        className={`fixed top-0 left-0 z-20 h-full w-3/4 max-w-[300px] bg-[#983fd4] text-white transform transition-transform duration-300 ${
+        className={`fixed top-0 left-0 z-20 h-full w-3/4 max-w-[300px] bg-purple-600 text-white transform transition-transform duration-300 ${
           isMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         {/* Close Button */}
-        <div className="flex justify-between items-center px-4 py-4 border-b border-gray-700">
-          <div className="text-2xl font-bold">Career</div>
+        <div className="flex justify-between items-center px-4 py-4 border-b border-gray-400">
+          <div className="text-3xl font-bold">CareerBanao</div>
           <button
             onClick={() => setIsMenuOpen(false)}
             aria-label="Close Mobile Menu"
-            className="text-white text-2xl"
+            className="text-white text-4xl"
           >
             <IoClose />
           </button>
@@ -253,7 +253,7 @@ const HeaderMain: React.FC = () => {
         {/* Mobile Menu Items */}
           <nav className="flex flex-col space-y-4 px-4 py-6">
             {[{ name: "Home", path: "/" },
-              { name: "Admission", path: "/admissions/engineering" },
+              { name: "Admission", path: "/admissions" },
               { name: "College Finder", path: "/CollegeFinder" },
               { name: "Counselling", path: "#", dropdown: true },  // This is for Counselling dropdown
               { name: "Contact", path: "/contact" },
@@ -268,7 +268,7 @@ const HeaderMain: React.FC = () => {
                     trigger={["click"]}
                     placement="bottomCenter"
                   >
-                    <div className="flex items-center justify-between px-2 py-2 hover:bg-[#22247A] rounded cursor-pointer">
+                    <div className="flex items-center justify-between px-2 py-2 hover:bg-purple-700 rounded cursor-pointer">
                       <span className="text-lg">{item.name}</span>
                       <FiArrowRight />
                     </div>
@@ -282,7 +282,7 @@ const HeaderMain: React.FC = () => {
                       e.stopPropagation();
                       setIsMenuOpen(false);
                     }}
-                    className="flex items-center justify-between px-2 py-2 hover:bg-[#22247A] rounded"
+                    className="flex items-center justify-between px-2 py-2 hover:bg-purple-700 rounded"
                   >
                     <span className="text-lg">{item.name}</span>
                     <FiArrowRight />

@@ -165,7 +165,7 @@ const CardItem = ({
             />
           </div>
           <div className="content w-[80%]">
-            <p className="text-[20px] text-primaryBtn font-bold">{title}</p>
+            <p className="text-[20px] text-[#983FD4]  font-bold">{title}</p>
             <p className="text-[15px] text-gray-500 fonse">{description}</p>
           </div>
         </Link>
@@ -185,7 +185,7 @@ const CardItem = ({
           />
         </div>
         <div className="content w-[80%]">
-          <p className="text-[20px] text-primaryBtn font-bold">{title}</p>
+          <p className="text-[20px] text-[#983FD4] font-bold">{title}</p>
           <p className="text-[15px] text-gray-500 fonse">{description}</p>
         </div>
       </div>
@@ -261,11 +261,23 @@ export const ContactForm = ({
       
         {/* Image Section */}
         <MyCol span={isSmallScreen ? 24 : 14} className="flex justify-center items-center">
-          <img
+          {/* <img
             src={`/icons/home/voicecall.png`}
             alt="contactForm"
             className="object-cover w-full max-w-[300px] h-auto rounded-xl shadow-lg"
-          />
+          /> */}
+          <div className="popup-left-content bg-[#983fd4] p-5 justify-center items-center rounded-l-lg hidden sm:flex">
+
+            <div className="why-register font-poppins mt-4 p-4 rounded-lg text-sm text-white">
+              <h1 className="font-semibold text-white text-2xl mb-2">Why register with us?</h1>
+              <ul className="list-disc pl-5 space-y-4">
+                  <li>25000+ Students Counseled, Absolutely Free of Cost</li>
+                  <li>Get help from our experts in finding the right college for you</li>
+                  <li>With a totally online admission process, we help you get college admission without having to step out</li>
+                  <li>You won’t get unwanted calls from third parties</li>
+              </ul>
+            </div>
+          </div>
         </MyCol>
       
         {/* Form Section */}

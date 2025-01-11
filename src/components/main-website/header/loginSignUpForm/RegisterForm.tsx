@@ -33,7 +33,9 @@ export default function RegisterForm({ setShowLoginForm, setShowRegisterForm }: 
       name: registerData.name,
       email: registerData.email,
       phone: registerData.phone,
-      password: registerData.password
+      password: registerData.password,
+      stream: registerData.stream,
+      level: registerData.level
     }
     if (!isChecked) {
       setErrorMessage("Please accept the terms and conditions to proceed.");

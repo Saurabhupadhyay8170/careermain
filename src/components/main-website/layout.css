@@ -31,7 +31,7 @@
   }
   
   .footer {
-    background-color: #983fd4;
+    background-color:#983FD4;
     color: #fff;
   }
   
@@ -135,7 +135,7 @@
   }
   
   .footer-call-to-action-button {
-    background-color: #e67e22;
+    background-color:rgb(223, 84, 170);
     border-radius: 45px;
     color: #fffff2;
     display: inline-block;

@@ -64,8 +64,8 @@ const Section1 = () => {
 
         {/* Left Section */}
         <div className="section-left flex flex-col p-5 gap-6 justify-center w-full lg:w-[60%] text-center lg:text-left">
-          <h1 className="text-[2rem] lg:text-[3.2rem] font-bold leading-[1.2] text-blue-900">
-            Admission Dreams, <span className="text-primaryBtn">Crafted Realities</span>
+          <h1 className="text-[2rem] lg:text-[3.2rem] font-bold leading-[1.2] text-purple-700">
+            Admission Dreams, <span className="text-pink-500">Crafted Realities</span>
           </h1>
           <p className="text-[16px] lg:text-[1.4rem] mt-[1.5rem] text-gray-700 leading-relaxed">
             Dreaming of the perfect college or university? Let us turn those
@@ -87,7 +87,7 @@ const Section1 = () => {
             <button
                 onClick={() => setShowForm(true)}
                 type="button"
-                className="border-2 border-purple-700 px-8 text-gray-700 p-2 hover:bg-purple-700 transition-all duration-400 ease-in-out transform hover:scale-105  rounded-md hover:text-white text-[16px] font-semibold"
+                className="border-2 border-purple-700 px-8 text-gray-700 p-2 hover:bg-purple-700 rounded-md hover:text-white text-[16px] font-semibold"
               >
                 Talk to College Expert
               </button>

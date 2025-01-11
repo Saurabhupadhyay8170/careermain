@@ -29,7 +29,7 @@ const Meeting: React.FC = () => {
     <div className="bg-[#dfdfde] p-2 mt-5 md:p-10 font-poppins">
       {/* Top Heading */}
       <div className="text-center md:text-left">
-        <h1 className="text-2xl md:text-4xl font-bold text-blue-800">
+        <h1 className="text-2xl md:text-4xl font-bold text-purple-700 ">
           More than advice, it’s eye-to-eye insight!
         </h1>
       </div>
@@ -46,7 +46,7 @@ const Meeting: React.FC = () => {
           autoplaySpeed={4000}
         >
            {sliderData.map((text, index) => (
-          <div key={index} className="p-5 bg-[#1F618D] rounded-md">
+          <div key={index} className="p-5 bg-purple-700  rounded-md">
             <p className="text-center text-lg md:text-xl text-white font-medium">
               {text}
             </p>
@@ -59,14 +59,14 @@ const Meeting: React.FC = () => {
       <div className="flex flex-col py-14 md:flex-row items-center justify-between gap-5">
         {/* Left Content */}
         <div className="w-full md:w-1/2 space-y-5">
-          <h2 className="text-orange-600 font-semibold text-2xl md:text-2xl">
+          <h2 className="text-purple-700 font-semibold text-2xl md:text-2xl">
            Experience real conversations with no filters
           </h2>
           <p className="text-lg text-gray-700">
            Try our Video Counselling for free!
           </p>
           <div>
-           <button onClick={() => setShowForm(true)} className="px-5 py-3 bg-orange-500 text-white rounded-lg shadow-md hover:bg-orange-600">
+           <button onClick={() => setShowForm(true)} className="px-5 py-3 bg-purple-700 text-white rounded-lg shadow-md hover:bg-pink-500">
             BOOK NOW
            </button>
            <ContactForm

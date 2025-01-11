@@ -148,7 +148,7 @@ const validateField = (name: string, value: string) => {
         
       </form>
       <div className="mt-5 flex gap-2">
-          <button className="bg-[#1F618D] text-white border font-bold border-gray-300 py-2 px-[50px] rounded-lg hover:bg-[#F89A00] hover:text-white transition duration-300"
+          <button className="bg-purple-700 text-white border font-bold border-gray-300 py-2 px-[50px] rounded-lg hover:bg-pink-500 hover:text-white transition duration-300"
           onClick={bhandleClick}
           >
             PREV
@@ -156,7 +156,7 @@ const validateField = (name: string, value: string) => {
         <button
           type="submit"
           onClick={handleSubmit}
-          className="bg-[#1F618D] text-white border font-bold border-gray-300 py-2 px-[50px] rounded-lg hover:bg-[#F89A00] hover:text-white transition duration-300"
+          className="bg-purple-700 text-white border font-bold border-gray-300 py-2 px-[50px] rounded-lg hover:bg-pink-500 hover:text-white transition duration-300"
         >
           Submit
         </button>
