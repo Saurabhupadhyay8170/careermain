@@ -69,7 +69,7 @@ const Contact = () => {
 
                 </div>
                 <div className="contact-right pt-[1rem] lg:pt-0 w-full lg:w-3/4 flex flex-col justify-between">
-                    <h1 style={style} className='letterSpace text-[18px] text-center lg:text-start lg:text-[23px] text-primaryBtn font-[600]'>SEND US A MESSAGE</h1>
+                    <h1 style={style} className='letterSpace text-[18px] text-center lg:text-start lg:text-[23px] text-purple-700 font-[600]'>SEND US A MESSAGE</h1>
                     <form onSubmit={submitHandler} className='flex mt-0 lg:mt-3 flex-col gap-2'>
                         <MyForm form={contactForm} >
                             <FormInput name="name" required={true} type="text" pattern={/^[a-zA-Z\s]*$/} className='h-[50px]' />
@@ -79,7 +79,7 @@ const Contact = () => {
                         </MyForm>
 
                         <div className='w-full mt-2 lg:text-start text-center'>
-                            <button type='submit' className="bg-primaryBtn hover:bg-hoverBtn w-3/4 lg:w-2/4 py-2 text-white rounded-3xl">Submit Now</button>
+                            <button type='submit' className="bg-purple-700 hover:bg-pink-500 w-3/4 lg:w-2/4 py-2 text-white rounded-3xl">Submit Now</button>
                         </div>
                     </form>
                 </div>
