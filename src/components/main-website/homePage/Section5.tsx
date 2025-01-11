@@ -308,18 +308,17 @@ export const ContactForm = ({
              <FormInput
               name="state"
               required={true}
-              type="select"
+              select={true}
               options={stateOptions.map((state) => ({
                 value: state,
                 label: state,
               }))}
             />
-
             {/* Stream Dropdown */}
             <FormInput
               name="stream"
               required={true}
-              type="select"
+              select={true}
               options={streamOptions.map((stream) => ({
                 value: stream,
                 label: stream,

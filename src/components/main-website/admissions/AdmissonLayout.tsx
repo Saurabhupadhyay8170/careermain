@@ -152,19 +152,19 @@ function AdmissionLayout({ data, loading, category }: AdmissionLayoutType) {
     >
       <div className="layout-container min-h-[450px] w-full px-4 py-8 flex flex-col lg:flex-row gap-20 relative top-[80px]">
         {/* Left Filter Section */}
-        <div className="layout-container-left w-full lg:w-[15%] flex flex-col gap-5">
+        <div className="layout-container-left w-full lg:w-[22%] flex flex-col gap-5">
           {/* Category Section */}
-          <div className="flex justify-between bg-white p-[1rem] text-sm rounded-lg shadow">
+          <div className="flex  justify-between bg-white p-2  text-sm rounded-lg shadow">
             <div className="flex items-center gap-2">
-              <FunnelIcon className="h-5 w-5 text-hoverBtn" />
+              <FunnelIcon className="h-5 w-5 text-purple-700" />
               <span className="text-gray-800 font-bold font-sans">CATEGORY</span>
             </div>
             <div
               onClick={handleResetFilters}
               className={`${defaultBtnBase} ${
                 filterCategory.default
-                  ? "text-orange-400 cursor-default"
-                  : "hover:text-hoverBtn cursor-pointer"
+                  ? "text-purple-700 cursor-default"
+                  : "hover:text-purple-700 cursor-pointer"
               }`}
             >
               Default
@@ -177,8 +177,8 @@ function AdmissionLayout({ data, loading, category }: AdmissionLayoutType) {
               onClick={() => dispatch(setGovernment())}
               className={`${governBtnBase} ${
                 filterCategory.government
-                  ? "bg-white text-orange-500 border-2 border-orange-500"
-                  : "bg-orange-500 text-white"
+                  ? "bg-purple-700 border-2 text-white"
+                  : " bg-white text-black border-2 border-purple-700"
               }`}
             >
               GOVERNMENT
@@ -187,8 +187,8 @@ function AdmissionLayout({ data, loading, category }: AdmissionLayoutType) {
               onClick={() => dispatch(setPrivate())}
               className={`${privateBtnBase} ${
                 filterCategory.private
-                  ? "bg-white text-orange-500 border-2 border-orange-500"
-                  : "bg-orange-500 text-white"
+                  ? "bg-purple-700 border-2 text-white"
+                  : "bg-white text-black border-2 border-purple-700"
               }`}
             >
               PRIVATE
@@ -198,7 +198,7 @@ function AdmissionLayout({ data, loading, category }: AdmissionLayoutType) {
           {/* Dropdown for States */}
           <div className="dropdown mt-4">
             <label htmlFor="states" className="block text-sm font-semibold">
-              <MapIcon className="h-5 w-5 inline-block text-orange-400 mr-2" />
+              <MapIcon className="h-5 w-5 inline-block text-purple-700 mr-2" />
               Select State
             </label>
             <select
@@ -222,7 +222,7 @@ function AdmissionLayout({ data, loading, category }: AdmissionLayoutType) {
           {/* Dropdown for Cities */}
           <div className="dropdown mt-4">
             <label htmlFor="cities" className="block text-sm font-semibold">
-              <MapPinIcon className="h-5 w-5 inline-block text-orange-400 mr-2" />
+              <MapPinIcon className="h-5 w-5 inline-block text-purple-700 mr-2" />
               Select City
             </label>
             <select
