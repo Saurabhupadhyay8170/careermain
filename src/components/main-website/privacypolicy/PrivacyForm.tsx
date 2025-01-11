@@ -165,7 +165,7 @@ function PrivacyForm() {
                         </div>
                     </MyForm>
                     <div className="w-full text-center">
-                        <button onClick={submitHandler} type="submit" disabled={!isSubmitActive} className={`bg-primaryBtn h-[3rem] rounded-3xl text-white text-[16px] font-semibold px-[2rem] ${!isSubmitActive && "cursor-not-allowed bg-slate-500"}`}>Request for a callback</button>
+                        <button onClick={submitHandler} type="submit" disabled={!isSubmitActive} className={`bg-purple-700 h-[3rem] rounded-3xl text-white text-[16px] font-semibold px-[2rem] ${!isSubmitActive && "cursor-not-allowed bg-slate-500"}`}>Request for a callback</button>
                     </div>
                 </div>
             </div >

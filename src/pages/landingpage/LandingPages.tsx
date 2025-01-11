@@ -8,7 +8,6 @@ import CollegeLandingPage from "src/components/main-website/admissions/landingpa
 import CourseFees from "src/components/main-website/admissions/landingpage/CourseFees"
 import CutOff from "src/components/main-website/admissions/landingpage/CutOff"
 import Placements from "src/components/main-website/admissions/landingpage/Placements"
-import Re from "src/components/main-website/admissions/landingpage/Re"
 import ReviewComponent from "src/components/main-website/admissions/landingpage/ReviewComponent"
 import Scholarship from "src/components/main-website/admissions/landingpage/Scholarship"
 import UniFaq from "src/components/main-website/admissions/landingpage/UniFaq"
@@ -31,7 +30,6 @@ const LandingPages = () => {
      <CutOff/>
      <CampusFacilities/>
      <ReviewComponent/>
-     <Re/>
      <UniFaq/>
      <div className="px-4 sm:px-8">
      <PrivacyForm/>
