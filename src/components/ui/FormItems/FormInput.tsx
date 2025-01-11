@@ -58,7 +58,7 @@ const FormInput = (props: childreProps) => {
         showSearch
           disabled={props.disabled}
           defaultValue={props.defaultValue ? props.defaultValue : "Choose your " + props.name}
-          // id="select"
+          id="select"
           style={{ width: "100%", fontWeight: "500"}}
           options={props.options ? props.options : []}
           onChange={props.onChange}
