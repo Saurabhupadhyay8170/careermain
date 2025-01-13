@@ -331,7 +331,7 @@ function ExamCard({ data, isLoading }: ExamCardType) {
         </a>
       </div> */}
       <div className="flex justify-end mt-3">
-        <Link to={'/apply'}>
+        <Link to={'/UniversityLandingPage'}>
         <button className="bg-purple-700 hover:bg-pink-500 px-6 py-2 text-white rounded-md font-semibold text-sm">VISIT MORE</button>
         </Link>
       </div>
